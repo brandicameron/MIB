@@ -5,7 +5,7 @@
   display: grid;
   place-items: center;
   transform: translateY(100vh);
-  animation: raise 300ms linear forwards;
+  animation: raise 200ms ease-in forwards;
   animation-delay: 500ms;
 }
 
