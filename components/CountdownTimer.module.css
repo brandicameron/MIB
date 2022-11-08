@@ -1,7 +1,6 @@
 .countDown {
-  font-size: 5rem;
+  font-size: 4rem;
   margin-bottom: 3rem;
   line-height: 1;
   color: var(--accent);
-  opacity: 0.75;
 }

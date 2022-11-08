@@ -8,12 +8,12 @@
   max-width: 500px;
   width: 95%;
   height: auto;
-  filter: drop-shadow(0px 10px 60px rgba(0 112 243 / 40%));
+  filter: drop-shadow(0px 10px 60px var(--glowMid));
   z-index: -1;
 }
 
 @media screen and (max-width: 600px) {
   .logo {
-    filter: drop-shadow(0px 0px 50px rgba(0 112 243 / 70%));
+    filter: drop-shadow(0px 0px 50px var(--glowDark));
   }
 }

@@ -5,13 +5,14 @@
   margin-right: -50%;
   transform: translate(-50%, -50%);
   width: 200vw;
-  height: 200%;
+  height: 200vw;
   background-image: url(/../images/stars.svg);
-  background-size: 40%;
+  background-repeat: repeat;
+  background-size: 1000px;
   background-position: center;
   transform-origin: center;
   opacity: 0.5;
-  animation: rotate 1200s linear infinite;
+  animation: rotate 1000s linear infinite;
   z-index: -1;
 }
 
@@ -32,7 +33,8 @@
 
 @media screen and (max-width: 600px) {
   .stars {
+    background-size: 1200px;
     min-width: 2500px;
-    animation: rotate 700s linear infinite;
+    animation: rotate 400s linear infinite;
   }
 }

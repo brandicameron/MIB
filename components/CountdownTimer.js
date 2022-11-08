@@ -24,7 +24,7 @@ export default function CountdownTimer({ setWipeout }) {
     }, 1000);
 
     if (countDown === -1) {
-      // setWipeout(true);
+      setWipeout(true);
     }
 
     return () => {
