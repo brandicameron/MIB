@@ -12,9 +12,8 @@ export default function Wipeout({ wipeout }) {
     wipeout && (
       <main className={styles.mainWipeout}>
         <Image
-          className={styles.neuraliyzer}
-          src='/../images/neuraliyzer.png'
-          alt='Neuraliyzer - Prepare for Wipeout.'
+          src='/../images/neuralyzer.png'
+          alt='Neuralyzer - Prepare for Wipeout.'
           width={125}
           height={735}
           loader={loaderProp}
