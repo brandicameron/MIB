@@ -10,17 +10,17 @@ export default function Home() {
   const [wipeout, setWipeout] = useState(false);
   const router = useRouter();
 
-  useEffect(() => {
-    if (wipeout) {
-      const timer = setTimeout(() => {
-        router.push(`https://www.google.com/`);
-      }, 2000);
+  // useEffect(() => {
+  //   if (wipeout) {
+  //     const timer = setTimeout(() => {
+  //       router.push(`https://www.google.com/`);
+  //     }, 2000);
 
-      return () => {
-        clearTimeout(timer);
-      };
-    }
-  }, [wipeout]);
+  //     return () => {
+  //       clearTimeout(timer);
+  //     };
+  //   }
+  // }, [wipeout]);
 
   return (
     <div className={styles.container}>
@@ -32,7 +32,7 @@ export default function Home() {
       <div className={styles.stars}></div>
       <Header />
       <Password wipeout={wipeout} setWipeout={setWipeout} />
-      <Wipeout wipeout={wipeout} />
+      {/* <Wipeout wipeout={wipeout} /> */}
     </div>
   );
 }
