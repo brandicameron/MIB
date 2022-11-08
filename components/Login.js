@@ -1,8 +1,8 @@
-import styles from './Password.module.css';
+import styles from './Login.module.css';
 import PasswordInput from './PasswordInput';
 import CountdownTimer from './CountdownTimer';
 
-export default function Password({ wipeout, setWipeout }) {
+export default function Login({ wipeout, setWipeout }) {
   return (
     !wipeout && (
       <main className={styles.main} style={{ opacity: wipeout ? 0 : 1 }}>

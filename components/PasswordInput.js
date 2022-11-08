@@ -1,6 +1,5 @@
 import styles from './PasswordInput.module.css';
 import { useState, useEffect, useRef } from 'react';
-
 import { keys } from '../data/keys';
 import { alienLetters } from '../data/alienLetters';
 
@@ -15,18 +14,12 @@ export default function PasswordInput({ setWipeout }) {
   }, []);
 
   const handleUserInput = (e) => {
-    const userInput = e.target.value;
+    const userInput = e.target.value.toLowerCase();
     setInput(userInput);
-    const inputArray = userInput.split('');
 
-    const alienCharacterArray = [];
-
-    const alienCharacterIndexes = inputArray.map((ch) => {
-      return keys.indexOf(ch);
-    });
-
-    alienCharacterIndexes.forEach((index) => {
-      alienCharacterArray.push(`../images/alien-letters/${alienLetters[index]}`);
+    const alienCharacterArray = userInput.split('').map((ch) => {
+      const characterKeyIndex = keys.indexOf(ch);
+      return `../images/alien-letters/${alienLetters[characterKeyIndex]}`;
     });
 
     setAlienCharacters(alienCharacterArray);
@@ -55,8 +48,8 @@ export default function PasswordInput({ setWipeout }) {
           id='password'
         />
         <ul className={styles.charactersContainer}>
-          {alienCharacters.map((ch, i) => (
-            <li key={i}>
+          {alienCharacters.map((ch, index) => (
+            <li key={index}>
               <img
                 className={
                   incorrectPassword ? `${styles.character} ${styles.incorrect}` : styles.character

@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import styles from '../styles/Home.module.css';
 import Header from '../components/Header';
-import Password from '../components/Password';
+import Login from '../components/Login';
 import Wipeout from '../components/Wipeout';
 
 export default function Home() {
@@ -36,7 +36,7 @@ export default function Home() {
       </Head>
       <div className={styles.stars}></div>
       <Header />
-      <Password wipeout={wipeout} setWipeout={setWipeout} />
+      <Login wipeout={wipeout} setWipeout={setWipeout} />
       <Wipeout wipeout={wipeout} />
     </div>
   );
