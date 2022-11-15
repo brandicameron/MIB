@@ -1,33 +1,19 @@
 import styles from './Wipeout.module.css';
 import Image from 'next/image';
+import Neuralyzer from '../public/images/neuralyzer.png';
+import Light from '../public/images/light-burst.png';
 
 export default function Wipeout({ wipeout }) {
-  // this bit of code fixes bug where png images wouldn't show
-  // https://stackoverflow.com/questions/71392729/next-image-component-url-issue
-  const loaderProp = ({ src }) => {
-    return src;
-  };
-
   return (
     wipeout && (
       <main className={styles.mainWipeout}>
         <div className={styles.neuralyzerContainer}>
           <Image
             className={styles.neuralyzer}
-            src='/../images/neuralyzer.png'
+            src={Neuralyzer}
             alt='Neuralyzer - Prepare for Wipeout.'
-            width={125}
-            height={735}
-            loader={loaderProp}
           />
-          <Image
-            className={styles.light}
-            src='/../images/light-burst.png'
-            alt=''
-            width={300}
-            height={200}
-            loader={loaderProp}
-          />
+          <Image className={styles.light} src={Light} alt='' width={300} height={200} />
         </div>
       </main>
     )
