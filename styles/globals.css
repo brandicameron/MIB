@@ -3,9 +3,11 @@
 :root {
   --accent: #0070f3;
   --accentLight: #6cadf7;
+  --success: #32cd32;
   --white: #f1eeee;
   --glowMid: rgba(0 112 243 / 70%);
   --glowDark: rgba(0 112 243 / 100%);
+  --successGlow: rgba(50 205 50 / 50%);
 }
 
 * {

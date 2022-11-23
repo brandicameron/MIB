@@ -1,7 +1,7 @@
 import styles from './Wipeout.module.css';
 import Image from 'next/image';
-import Neuralyzer from '../public/images/neuralyzer.png';
-import Light from '../public/images/light-burst.png';
+import Neuralyzer from '../../public/images/neuralyzer.png';
+import Light from '../../public/images/light-burst.png';
 
 export default function Wipeout({ wipeout }) {
   return (

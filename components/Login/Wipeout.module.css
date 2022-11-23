@@ -5,6 +5,7 @@
   display: grid;
   place-items: center;
   top: 0;
+  z-index: 1000;
 }
 
 .mainWipeout > * {
