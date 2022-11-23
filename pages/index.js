@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import styles from '../styles/Home.module.css';
 import Header from '../components/Header';
 import Login from '../components/Login';
 import Wipeout from '../components/Wipeout';
+import Space from '../components/Space';
 
 export default function Home() {
   const [wipeout, setWipeout] = useState(false);
+  const [passwordAccepted, setPasswordAccepted] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -23,7 +24,7 @@ export default function Home() {
   }, [wipeout]);
 
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>MIB Agent Access Portal</title>
         <meta
@@ -34,10 +35,16 @@ export default function Home() {
         <meta property='og:title' content='MIB Agent Portal' />
         <meta property='og:image' content='/share.jpg' />
       </Head>
-      <div className={styles.stars}></div>
-      <Header />
-      <Login wipeout={wipeout} setWipeout={setWipeout} />
+      <Space passwordAccepted={passwordAccepted} />
+      {!passwordAccepted && <Header />}
+      {!passwordAccepted && (
+        <Login
+          wipeout={wipeout}
+          setWipeout={setWipeout}
+          setPasswordAccepted={setPasswordAccepted}
+        />
+      )}
       <Wipeout wipeout={wipeout} />
-    </div>
+    </>
   );
 }
