@@ -3,11 +3,13 @@ import { useState, useEffect, useRef } from 'react';
 import { keys } from '../data/keys';
 import { alienLetters } from '../data/alienLetters';
 
-export default function PasswordInput({ setWipeout }) {
+export default function PasswordInput({ setWipeout, setPasswordAccepted }) {
   const [input, setInput] = useState('');
   const [alienCharacters, setAlienCharacters] = useState([]);
   const [incorrectPassword, setIncorrectPassword] = useState(false);
   const inputElement = useRef();
+
+  const correctPassword = 'orion';
 
   useEffect(() => {
     inputElement.current.focus();
@@ -23,14 +25,23 @@ export default function PasswordInput({ setWipeout }) {
     });
 
     setAlienCharacters(alienCharacterArray);
+  };
 
-    if (userInput.length === 5) {
+  useEffect(() => {
+    if (input === correctPassword) {
+      console.log('Correct Password!');
+      setPasswordAccepted(true);
+    } else if (input.length === 5 && input !== correctPassword) {
       setIncorrectPassword(true);
-      setTimeout(() => {
+      let timer = setTimeout(() => {
         setWipeout(true);
       }, 750);
+
+      return () => {
+        setTimeout(timer);
+      };
     }
-  };
+  }, [input]);
 
   return (
     <>

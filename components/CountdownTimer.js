@@ -2,18 +2,7 @@ import styles from './CountdownTimer.module.css';
 import { useState, useEffect } from 'react';
 
 export default function CountdownTimer({ setWipeout }) {
-  const [countDown, setCountDown] = useState(6);
-  const [showCountDown, setShowCountDown] = useState(false);
-
-  useEffect(() => {
-    const counterTimer = setTimeout(() => {
-      setShowCountDown(true);
-    }, 1000);
-
-    return () => {
-      clearTimeout(counterTimer);
-    };
-  }, []);
+  const [countDown, setCountDown] = useState(5);
 
   useEffect(() => {
     // setting if statements to -1 allows counter to go to zero
@@ -34,9 +23,5 @@ export default function CountdownTimer({ setWipeout }) {
     };
   }, [countDown]);
 
-  return (
-    <p className={styles.countDown} style={{ visibility: showCountDown ? 'visible' : 'hidden' }}>
-      {countDown}
-    </p>
-  );
+  return <p className={styles.countDown}>{countDown}</p>;
 }

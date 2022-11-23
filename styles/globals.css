@@ -5,7 +5,7 @@
   --accentLight: #6cadf7;
   --white: #f1eeee;
   --glowMid: rgba(0 112 243 / 70%);
-  --glowDark: rgba(0 112 243 / 90%);
+  --glowDark: rgba(0 112 243 / 100%);
 }
 
 * {
