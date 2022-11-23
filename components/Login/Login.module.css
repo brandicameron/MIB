@@ -1,15 +1,15 @@
+.container {
+  display: grid;
+  place-content: center;
+  height: 90vh;
+  gap: 5rem;
+  max-height: -webkit-fill-available;
+}
+
 .logo {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  top: 20px;
-  top: 7vh;
-  max-width: 500px;
-  width: 95%;
+  width: 100%;
   height: auto;
   filter: drop-shadow(0px 10px 60px var(--glowMid));
-  z-index: -1;
 }
 
 @media screen and (max-width: 600px) {

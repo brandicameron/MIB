@@ -1,27 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import Header from '../components/Header';
-import Login from '../components/Login';
-import Wipeout from '../components/Wipeout';
-import Space from '../components/Space';
+import Login from '../components/Login/Login';
 
 export default function Home() {
-  const [wipeout, setWipeout] = useState(false);
   const [passwordAccepted, setPasswordAccepted] = useState(false);
-  const router = useRouter();
-
-  useEffect(() => {
-    if (wipeout) {
-      const timer = setTimeout(() => {
-        router.push(`https://www.google.com/`);
-      }, 2000);
-
-      return () => {
-        clearTimeout(timer);
-      };
-    }
-  }, [wipeout]);
 
   return (
     <>
@@ -35,16 +17,9 @@ export default function Home() {
         <meta property='og:title' content='MIB Agent Portal' />
         <meta property='og:image' content='/share.jpg' />
       </Head>
-      <Space passwordAccepted={passwordAccepted} />
-      {!passwordAccepted && <Header />}
       {!passwordAccepted && (
-        <Login
-          wipeout={wipeout}
-          setWipeout={setWipeout}
-          setPasswordAccepted={setPasswordAccepted}
-        />
+        <Login passwordAccepted={passwordAccepted} setPasswordAccepted={setPasswordAccepted} />
       )}
-      <Wipeout wipeout={wipeout} />
     </>
   );
 }
