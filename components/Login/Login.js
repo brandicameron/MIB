@@ -5,7 +5,7 @@ import CountdownTimer from './CountdownTimer';
 import PasswordInput from './PasswordInput';
 import Wipeout from './Wipeout';
 
-export default function Login({ passwordAccepted, setPasswordAccepted }) {
+export default function Login() {
   const [wipeout, setWipeout] = useState(false);
   const router = useRouter();
 
@@ -34,10 +34,12 @@ export default function Login({ passwordAccepted, setPasswordAccepted }) {
           />
 
           <CountdownTimer setWipeout={setWipeout} />
-          <PasswordInput setWipeout={setWipeout} setPasswordAccepted={setPasswordAccepted} />
+          <PasswordInput setWipeout={setWipeout} />
         </main>
       )}
       <Wipeout wipeout={wipeout} />
     </>
   );
 }
+
+Login.getLayout = (page) => page;

@@ -1,17 +1,15 @@
+import { useRouter } from 'next/router';
+
 export function useValidatePassword() {
-  const validatePassword = (
-    input,
-    setWipeout,
-    setPasswordAccepted,
-    setCorrectPassword,
-    setIncorrectPassword
-  ) => {
+  const router = useRouter();
+
+  const validatePassword = (input, setWipeout, setCorrectPassword, setIncorrectPassword) => {
     const password = 'orion';
 
     if (input === password) {
       setCorrectPassword(true);
       setTimeout(() => {
-        setPasswordAccepted(true);
+        router.push(`/portal`);
       }, 500);
     } else if (input.length === 5 && input !== password) {
       setIncorrectPassword(true);
