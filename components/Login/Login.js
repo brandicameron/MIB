@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import CountdownTimer from './CountdownTimer';
 import PasswordInput from './PasswordInput';
-import Space from './Space';
 import Wipeout from './Wipeout';
 
 export default function Login({ passwordAccepted, setPasswordAccepted }) {
@@ -38,7 +37,6 @@ export default function Login({ passwordAccepted, setPasswordAccepted }) {
           <PasswordInput setWipeout={setWipeout} setPasswordAccepted={setPasswordAccepted} />
         </main>
       )}
-      <Space passwordAccepted={passwordAccepted} />
       <Wipeout wipeout={wipeout} />
     </>
   );

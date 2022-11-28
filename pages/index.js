@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import Login from '../components/Login/Login';
+import AgentPortal from '../components/AgentPortal/AgentPortal';
 
 export default function Home() {
   const [passwordAccepted, setPasswordAccepted] = useState(false);
@@ -20,6 +21,7 @@ export default function Home() {
       {!passwordAccepted && (
         <Login passwordAccepted={passwordAccepted} setPasswordAccepted={setPasswordAccepted} />
       )}
+      {passwordAccepted && <AgentPortal />}
     </>
   );
 }
