@@ -4,7 +4,7 @@ import { useInputStyles } from '../../hooks/useInputStyles';
 import { useAlienCharacters } from '../../hooks/useAlienCharacters';
 import { useValidatePassword } from '../../hooks/useValidatePassword';
 
-export default function PasswordInput({ setWipeout, setPasswordAccepted }) {
+export default function PasswordInput({ setWipeout }) {
   const [input, setInput] = useState('');
   const [alienCharacters, setAlienCharacters] = useState([]);
   const [correctPassword, setCorrectPassword] = useState(false);
@@ -23,13 +23,7 @@ export default function PasswordInput({ setWipeout, setPasswordAccepted }) {
     setInput(userInput);
     replaceInputWithAlienChars(userInput, setAlienCharacters);
 
-    validatePassword(
-      userInput,
-      setWipeout,
-      setPasswordAccepted,
-      setCorrectPassword,
-      setIncorrectPassword
-    );
+    validatePassword(userInput, setWipeout, setCorrectPassword, setIncorrectPassword);
   };
 
   return (
