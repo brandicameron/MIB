@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 :root {
+  --background: #00080c;
   --accent: #0070f3;
   --accentLight: #6cadf7;
-  --success: #32cd32;
+  --stroke: #42dbf1;
+  --success: #0af536;
+  /* --success: #32cd32; */
   --white: #f1eeee;
   --glowMid: rgba(0 112 243 / 70%);
   --glowDark: rgba(0 112 243 / 100%);

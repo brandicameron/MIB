@@ -1,5 +1,7 @@
 import styles from './Layout.module.css';
 import Head from 'next/head';
+import Space from '../Space/Space';
+import Frame from './Frame';
 
 export default function Layout({ children }) {
   return (
@@ -11,10 +13,9 @@ export default function Layout({ children }) {
         <meta property='og:title' content='MIB Agent Portal' />
         <meta property='og:image' content='/share.jpg' />
       </Head>
-      <div className={styles.frame}></div>
-      <h1>Frame Header</h1>
-      <main>{children}</main>
-      <footer>Frame Footer</footer>
+      <main className={styles.main}>{children}</main>
+      <Frame />
+      <Space />
     </>
   );
 }

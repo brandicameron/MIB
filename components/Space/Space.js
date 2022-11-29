@@ -1,7 +1,7 @@
-import styles from './SpaceLayout.module.css';
+import styles from './Space.module.css';
 import { useState, useEffect } from 'react';
 
-export default function SpaceLayout({ children }) {
+export default function Space({ children }) {
   const [stars, setStars] = useState([]);
 
   function getRandomNumber(min, max) {

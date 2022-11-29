@@ -1,0 +1,11 @@
+.main {
+  position: relative;
+  padding: 2rem;
+  z-index: 2;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    padding: 3rem 2rem;
+  }
+}
