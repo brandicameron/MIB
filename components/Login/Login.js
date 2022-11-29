@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import CountdownTimer from './CountdownTimer';
 import PasswordInput from './PasswordInput';
 import Wipeout from './Wipeout';
+import Space from '../Space/Space';
 
 export default function Login() {
   const [wipeout, setWipeout] = useState(false);
@@ -38,6 +39,7 @@ export default function Login() {
         </main>
       )}
       <Wipeout wipeout={wipeout} />
+      <Space />
     </>
   );
 }
