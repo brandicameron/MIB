@@ -1,0 +1,111 @@
+.navigation {
+  position: fixed;
+  top: 10%;
+  width: 125px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.75rem 1rem 1.5rem 1rem;
+  background-image: url('../../public/images/navbar.svg');
+  background-repeat: no-repeat;
+  filter: var(--portalGlow);
+  font-size: var(--fontReg);
+  font-weight: var(--fontBold);
+  text-transform: uppercase;
+  transform: translateX(-175px);
+  animation: slideRight 50ms linear forwards;
+  animation-delay: 1.1s;
+}
+
+@keyframes slideRight {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.navigation p {
+  font-size: var(--fontLg);
+  font-weight: var(--fontBold);
+  margin-left: 0.7rem;
+}
+
+.nav li {
+  margin: 1.75rem 0;
+}
+
+.nav li:hover,
+.navButtons li button:hover {
+  color: var(--hover);
+}
+
+.navButtons li button {
+  line-height: 1.1;
+  border: 4px solid var(--stroke);
+  padding: 0.5rem 0;
+  margin: 0.25rem;
+  filter: var(--portalGlow);
+}
+
+@media screen and (max-width: 400px) {
+  .navigation {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100vh);
+    flex-direction: row;
+    background-image: none;
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    border-top: 4px solid var(--stroke);
+    animation: popUp 350ms linear forwards;
+    animation-delay: 550ms;
+  }
+
+  @keyframes popUp {
+    100% {
+      top: calc(100vh - 180px);
+    }
+  }
+
+  .navigation p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--fontLg);
+    font-weight: var(--fontBold);
+    margin-left: 0;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .navButtons {
+    display: flex;
+    width: 97%;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .navButtons li button {
+    height: 100%;
+    max-width: 75px;
+    padding: 0;
+    margin: 0;
+    filter: none;
+    border: none;
+    background-color: transparent;
+  }
+
+  .navButtons li:nth-child(1) {
+    border-right: 4px solid var(--stroke);
+  }
+
+  .navButtons li:nth-child(2) {
+    border-left: 4px solid var(--stroke);
+  }
+}
