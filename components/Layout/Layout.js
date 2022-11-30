@@ -1,4 +1,3 @@
-import styles from './Layout.module.css';
 import Head from 'next/head';
 import Space from '../Space/Space';
 import Frame from './Frame';
@@ -14,7 +13,7 @@ export default function Layout({ children }) {
         <meta property='og:image' content='/share.jpg' />
       </Head>
       <Space />
-      <main className={styles.main}>{children}</main>
+      <>{children}</>
       <Frame />
     </>
   );
