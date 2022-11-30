@@ -1,14 +1,14 @@
 import styles from '../components/Login/PasswordInput.module.css';
 
-export function useInputStyles(incorrectPassword, correctPassword) {
+export function useInputStyles(correctPassword) {
   const inputStyles = () => {
     let inputClass = `${styles.passwordInput}`;
 
-    if (incorrectPassword) {
+    if (correctPassword === false) {
       inputClass = `${styles.passwordInput} ${styles.incorrect}`;
     }
 
-    if (correctPassword) {
+    if (correctPassword === true) {
       inputClass = `${styles.passwordInput} ${styles.correct}`;
     }
 
@@ -18,11 +18,11 @@ export function useInputStyles(incorrectPassword, correctPassword) {
   const characterStyles = () => {
     let characterClass = `${styles.character}`;
 
-    if (incorrectPassword) {
+    if (correctPassword === false) {
       characterClass = `${styles.character} ${styles.incorrect}`;
     }
 
-    if (correctPassword) {
+    if (correctPassword === true) {
       characterClass = `${styles.character} ${styles.correct}`;
     }
 
