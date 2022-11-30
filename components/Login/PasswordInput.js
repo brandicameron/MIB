@@ -22,13 +22,17 @@ export default function PasswordInput({ setWipeout }) {
     const userInput = e.target.value.toLowerCase();
     setInput(userInput);
     replaceInputWithAlienChars(userInput, setAlienCharacters);
-
     validatePassword(userInput, setWipeout, setCorrectPassword, setIncorrectPassword);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    return false;
   };
 
   return (
     <>
-      <form className={styles.inputContainer} spellCheck='false'>
+      <form className={styles.inputContainer} spellCheck='false' onSubmit={handleSubmit}>
         <label htmlFor='password-input'>Enter Agent Code</label>
         <input
           className={inputStyles()}
