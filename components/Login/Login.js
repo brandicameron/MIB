@@ -1,6 +1,5 @@
 import styles from './Login.module.css';
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { useState } from 'react';
 import CountdownTimer from './CountdownTimer';
 import PasswordInput from './PasswordInput';
 import Wipeout from './Wipeout';
@@ -8,19 +7,6 @@ import Space from '../Space/Space';
 
 export default function Login() {
   const [wipeout, setWipeout] = useState(false);
-  const router = useRouter();
-
-  useEffect(() => {
-    if (wipeout) {
-      const timer = setTimeout(() => {
-        router.push(`https://www.google.com/`);
-      }, 2000);
-
-      return () => {
-        clearTimeout(timer);
-      };
-    }
-  }, [wipeout]);
 
   return (
     <>

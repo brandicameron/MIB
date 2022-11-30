@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 export function useValidatePassword() {
   const router = useRouter();
 
-  const validatePassword = (input, setWipeout, setCorrectPassword, setIncorrectPassword) => {
+  const validatePassword = (input, setWipeout, setCorrectPassword) => {
     const password = 'orion';
 
     if (input === password) {
@@ -12,7 +12,7 @@ export function useValidatePassword() {
         router.push(`/portal`);
       }, 500);
     } else if (input.length === 5 && input !== password) {
-      setIncorrectPassword(true);
+      setCorrectPassword(false);
       setTimeout(() => {
         setWipeout(true);
       }, 750);

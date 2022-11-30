@@ -7,9 +7,8 @@ import { useValidatePassword } from '../../hooks/useValidatePassword';
 export default function PasswordInput({ setWipeout }) {
   const [input, setInput] = useState('');
   const [alienCharacters, setAlienCharacters] = useState([]);
-  const [correctPassword, setCorrectPassword] = useState(false);
-  const [incorrectPassword, setIncorrectPassword] = useState(false);
-  const { inputStyles, characterStyles } = useInputStyles(incorrectPassword, correctPassword);
+  const [correctPassword, setCorrectPassword] = useState(null);
+  const { inputStyles, characterStyles } = useInputStyles(correctPassword);
   const { replaceInputWithAlienChars } = useAlienCharacters();
   const { validatePassword } = useValidatePassword();
   const inputElement = useRef();
@@ -22,7 +21,7 @@ export default function PasswordInput({ setWipeout }) {
     const userInput = e.target.value.toLowerCase();
     setInput(userInput);
     replaceInputWithAlienChars(userInput, setAlienCharacters);
-    validatePassword(userInput, setWipeout, setCorrectPassword, setIncorrectPassword);
+    validatePassword(userInput, setWipeout, setCorrectPassword);
   };
 
   const handleSubmit = (e) => {
