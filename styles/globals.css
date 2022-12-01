@@ -52,6 +52,10 @@ button {
   font-size: inherit;
 }
 
+input[type='range'] {
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
 }

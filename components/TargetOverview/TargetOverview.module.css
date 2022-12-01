@@ -71,10 +71,13 @@
   /* relative positions alien on top of border */
   position: relative;
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem;
+  margin-top: -10px;
+  margin-left: 1.5vw;
   height: auto;
   aspect-ratio: 1/1;
   object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(0 112 243 / 30%)) drop-shadow(0 0 50px rgb(106, 71, 237, 0.8));
   transform: scaleY(0);
   animation: reveal 75ms linear forwards;
   animation-delay: 2.4s;
@@ -84,6 +87,76 @@
   100% {
     transform: scaleY(1);
   }
+}
+
+.rangeContainer {
+  position: relative;
+  margin: 0 auto;
+}
+
+.rangeSlider {
+  position: relative;
+  appearance: none;
+  width: 200px;
+  height: 4px;
+  background-color: var(--stroke);
+  border-radius: 10px;
+  filter: var(--portalGlow);
+}
+
+.rangeSlider::before {
+  position: absolute;
+  content: '';
+  top: -8px;
+  height: 20px;
+  width: 4px;
+  background-color: var(--stroke);
+}
+
+.rangeSlider::after {
+  position: absolute;
+  content: '';
+  top: -8px;
+  right: 0;
+  height: 20px;
+  width: 4px;
+  background-color: var(--stroke);
+}
+
+.rangeSlider::-webkit-slider-thumb {
+  position: relative;
+  background-image: url('../../public/images/rotate-icon.svg');
+  background-color: var(--background);
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-position: center;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  border: 4px solid var(--stroke);
+  border-radius: 50%;
+  cursor: grab;
+  box-shadow: none;
+  z-index: 2;
+}
+
+.rangeSlider::-moz-range-thumb {
+  position: relative;
+  background-image: url('../../public/images/rotate-icon.svg');
+  background-color: var(--background);
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-position: center;
+  display: block;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  border: 4px solid var(--stroke);
+  border-radius: 50%;
+  cursor: grab;
+  z-index: 2;
 }
 
 .stats {
