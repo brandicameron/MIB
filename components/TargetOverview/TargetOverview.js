@@ -39,19 +39,15 @@ export default function TargetOverview() {
             alt='Commander Aldoosi, a color changing alien that is short with extra large round eyes, and horns running down the center of his head.'
           />
         </div>
-        <div className={styles.rangeContainer}>
-          <input
-            className={styles.rangeSlider}
-            type='range'
-            name='imgSlider'
-            min='1'
-            max='3'
-            step={1}
-            value={rangeValue}
-            onChange={handleRangeValue}
-            aria-label='Slide to see different angles of the alien.'
-          />
-        </div>
+        <input
+          className={styles.rangeSlider}
+          type='range'
+          min='1'
+          max='3'
+          value={rangeValue}
+          onChange={handleRangeValue}
+          aria-label='Slide to see different angles of the alien.'
+        />
         <ul className={styles.stats}>
           <li>
             COMMANDER ALDOOSI <img src='./images/alien-name.svg' alt='' />
