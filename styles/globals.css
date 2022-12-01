@@ -10,7 +10,7 @@
   /* --success: #32cd32; */
   --white: #f1eeee;
   --fontBold: 600;
-  --fontLg: clamp(1.3rem, 1.9vw, 1.5rem);
+  --fontLg: clamp(1.2rem, 1.9vw, 1.5rem);
   --fontMed: 1.1rem;
   --fontReg: 0.9rem;
   --portalGlow: drop-shadow(0 0 3px #6a47ed) drop-shadow(0 0 7px #6a47ed);
