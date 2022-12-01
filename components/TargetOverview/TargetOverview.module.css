@@ -8,7 +8,6 @@
   gap: 4rem;
   max-height: -webkit-fill-available;
   opacity: 0;
-  transform: translateY(30px);
   animation: reveal 150ms linear forwards;
   animation-delay: 1.1s;
   /* grid-template-areas:
@@ -19,7 +18,6 @@
 @keyframes reveal {
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -122,6 +120,16 @@
   .targetImg {
     width: 70vw;
     background-size: 50%;
+  }
+
+  .targetImg::before {
+    width: 104%;
+    background-image: url('../../public/images/inner-circle.svg');
+  }
+
+  .targetImg::after {
+    width: 105%;
+    background-image: url('../../public/images/outer-circle.svg');
   }
 
   .targetImg img {

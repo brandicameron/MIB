@@ -13,6 +13,7 @@
   font-size: var(--fontReg);
   font-weight: var(--fontBold);
   text-transform: uppercase;
+  pointer-events: auto;
   transform: translateX(-175px);
   animation: slideRight 50ms linear forwards;
   animation-delay: 1.1s;
