@@ -127,23 +127,20 @@
 
 @media screen and (pointer: coarse) {
   .frame {
+    height: calc(100vh - 120px);
     max-height: -webkit-fill-available;
   }
 }
 
-@media (pointer: coarse) and (orientation: landscape) {
-  .frame {
-    height: calc(100vh - 125px);
+@media screen and (max-width: 900px) {
+  .frameLeft .borderTop,
+  .frameRight .borderTop {
+    width: calc(100% - 270px);
+    top: 31px;
   }
 }
 
-/* @media screen and (max-width: 400px) {
-  .frame {
-    height: calc(100vh - 125px);
-    width: calc(100% - 30px);
-    max-height: -webkit-fill-available;
-  }
-
+@media screen and (max-width: 400px) {
   .frameLeft,
   .frameRight {
     animation: slideIn 500ms ease-in forwards;
@@ -157,10 +154,6 @@
 
   .frameLeft .borderSide,
   .frameRight .borderSide {
-    top: 50%;
-    transform: translateY(-50%);
     height: calc(100% - 125px);
-    width: 4px;
-    background-color: var(--stroke);
   }
-} */
+}

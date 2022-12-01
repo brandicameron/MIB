@@ -7,3 +7,10 @@
   width: calc(100% - 55px);
   overflow: scroll;
 }
+
+@media screen and (pointer: coarse) {
+  .container {
+    height: calc(100vh - 155px);
+    max-height: -webkit-fill-available;
+  }
+}
