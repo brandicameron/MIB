@@ -177,11 +177,38 @@
   }
 }
 
+.galaxyContainer {
+  position: fixed;
+  display: grid;
+  place-content: center;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  border-top: 4px solid var(--stroke);
+  border-left: 4px solid var(--stroke);
+  background-color: var(--background);
+  filter: var(--portalGlow);
+  overflow: hidden;
+}
+
+.galaxyContainer figcaption {
+  text-align: center;
+  border-bottom: 4px solid var(--stroke);
+}
+
+.galaxyContainer video {
+  object-fit: contain;
+  height: 18vh;
+}
+
 @media screen and (max-height: 850px) {
   .imageBorder {
     height: 50vh;
     width: auto;
     margin: 0 auto;
+  }
+  .galaxyContainer video {
+    height: 13vh;
   }
 }
 
@@ -215,5 +242,25 @@
   .imageBorder {
     width: 70vw;
     height: auto;
+  }
+
+  .galaxyContainer {
+    position: relative;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    overflow: unset;
+  }
+
+  .galaxyContainer figcaption {
+    border-top: 4px solid var(--stroke);
+    width: 100%;
+  }
+
+  .galaxyContainer video {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    height: unset;
   }
 }

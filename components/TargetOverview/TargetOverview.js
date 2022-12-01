@@ -56,6 +56,25 @@ export default function TargetOverview() {
           <li>Changes color with mood: Pink is very bad.</li>
           <li>Thought to be in hiding at the Fulton Fish Market in Hunts Point.</li>
         </ul>
+        {/* <article className={styles.partnerContainer}>
+
+        </article> */}
+        <article className={styles.galaxyContainer}>
+          <figure>
+            <figcaption>
+              <span className='bold'>HOME GALAXY:</span> Markarian 231
+            </figcaption>
+            <video
+              src='./images/galaxy.mp4'
+              autoPlay
+              muted
+              playsInline
+              loop
+              width={337}
+              height={190}
+            ></video>
+          </figure>
+        </article>
       </div>
     </>
   );
