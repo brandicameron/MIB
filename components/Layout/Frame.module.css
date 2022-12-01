@@ -125,7 +125,19 @@
   right: 0;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (pointer: coarse) {
+  .frame {
+    max-height: -webkit-fill-available;
+  }
+}
+
+@media (pointer: coarse) and (orientation: landscape) {
+  .frame {
+    height: calc(100vh - 125px);
+  }
+}
+
+/* @media screen and (max-width: 400px) {
   .frame {
     height: calc(100vh - 125px);
     width: calc(100% - 30px);
@@ -151,4 +163,4 @@
     width: 4px;
     background-color: var(--stroke);
   }
-}
+} */

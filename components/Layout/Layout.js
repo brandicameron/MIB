@@ -1,3 +1,4 @@
+import styles from './Layout.module.css';
 import Head from 'next/head';
 import Frame from './Frame';
 
@@ -11,7 +12,7 @@ export default function Layout({ children }) {
         <meta property='og:title' content='MIB Agent Portal' />
         <meta property='og:image' content='/share.jpg' />
       </Head>
-      <div className='global-container'>{children}</div>
+      <main className={styles.container}>{children}</main>
       <Frame />
     </>
   );

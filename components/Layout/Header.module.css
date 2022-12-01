@@ -27,7 +27,7 @@
   line-height: 1;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 850px) {
   .header {
     background-image: url('../../public/images/header-m.svg');
     background-position: bottom;
