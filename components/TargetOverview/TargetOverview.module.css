@@ -3,7 +3,7 @@
   display: grid;
   place-content: center;
   width: fit-content;
-  height: 99%;
+  height: 100%;
   margin: 0 auto;
   gap: 2rem;
 }
