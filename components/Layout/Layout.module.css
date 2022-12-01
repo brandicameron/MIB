@@ -14,3 +14,10 @@
     max-height: -webkit-fill-available;
   }
 }
+
+@media screen and (max-width: 850px) {
+  .container {
+    top: calc(50% - 5px);
+    height: calc(100vh - 225px);
+  }
+}

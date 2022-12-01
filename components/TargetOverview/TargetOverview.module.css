@@ -119,12 +119,32 @@
 @media screen and (max-width: 1250px) {
   .content {
     place-content: unset;
-    padding-top: 100px;
+    padding-top: 85px;
+  }
+
+  .content h1 {
+    margin-bottom: 0.5rem;
   }
 
   .stats {
     position: relative;
     top: 0;
     right: 0;
+  }
+
+  .stats li:nth-child(1) {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    padding-top: 40px;
+  }
+
+  .imageBorder {
+    width: 70vw;
+    height: auto;
   }
 }
