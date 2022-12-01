@@ -1,7 +1,7 @@
 import styles from './Space.module.css';
 import { useState, useEffect } from 'react';
 
-export default function Space({ children }) {
+export default function Space() {
   const [stars, setStars] = useState([]);
 
   function getRandomNumber(min, max) {
@@ -34,7 +34,6 @@ export default function Space({ children }) {
           ></div>
         ))}
       </div>
-      {children}
     </>
   );
 }

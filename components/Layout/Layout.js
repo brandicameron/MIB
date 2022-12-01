@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Space from '../Space/Space';
 import Frame from './Frame';
 
 export default function Layout({ children }) {
@@ -12,7 +11,6 @@ export default function Layout({ children }) {
         <meta property='og:title' content='MIB Agent Portal' />
         <meta property='og:image' content='/share.jpg' />
       </Head>
-      <Space />
       <>{children}</>
       <Frame />
     </>

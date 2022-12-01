@@ -1,11 +1,15 @@
-// import SpaceLayout from '../components/SpaceLayout/SpaceLayout';
-// import Layout from '../components/Layout/Layout';
 import '../styles/globals.css';
+import Space from '../components/Space/Space';
 
 function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
 
-  return getLayout(<Component {...pageProps} />);
+  return getLayout(
+    <>
+      <Component {...pageProps} />
+      <Space />
+    </>
+  );
 }
 
 export default MyApp;
