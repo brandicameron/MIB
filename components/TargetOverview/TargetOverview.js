@@ -53,8 +53,8 @@ export default function TargetOverview() {
             COMMANDER ALDOOSI <img src='./images/alien-name.svg' alt='' />
           </li>
           <li>Escaped LunerMax Prison: November 12, 2022</li>
-          <li>Changes color with mood: Pink is very bad.</li>
-          <li>Thought to be in hiding at the Fulton Fish Market in Hunts Point.</li>
+          <li>Changes color with mood: Pink is bad news.</li>
+          <li>Likely in hiding at Fulton Fish Market, Hunts Point.</li>
         </ul>
         {/* <article className={styles.partnerContainer}>
 
