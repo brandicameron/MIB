@@ -11,7 +11,7 @@ export default function Layout({ children }) {
         <meta property='og:title' content='MIB Agent Portal' />
         <meta property='og:image' content='/share.jpg' />
       </Head>
-      <>{children}</>
+      <div className='global-container'>{children}</div>
       <Frame />
     </>
   );
