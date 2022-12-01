@@ -46,7 +46,7 @@ export default function TargetOverview() {
           max='3'
           value={rangeValue}
           onChange={handleRangeValue}
-          aria-label='Slide to see different angles of the alien.'
+          aria-label='Slide to see different views of the alien Commander Aldoosi.'
         />
         <ul className={styles.stats}>
           <li>
