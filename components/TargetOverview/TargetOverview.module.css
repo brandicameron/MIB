@@ -6,6 +6,9 @@
   height: 100%;
   margin: 0 auto;
   gap: 2rem;
+  opacity: 0;
+  animation: fade-in 150ms linear forwards;
+  animation-delay: 1.5s;
 }
 
 .content h1 {
@@ -42,14 +45,26 @@
   filter: var(--portalGlow);
 }
 
-.imageBorder::before {
-  width: 104%;
-  background-image: url('../../public/images/inner-circle.svg');
-}
-
 .imageBorder::after {
   width: 105%;
   background-image: url('../../public/images/outer-circle.svg');
+  transform: translate(-50%, -50%) rotate(-75deg);
+  animation: rotate 200ms ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.imageBorder::before {
+  width: 104%;
+  background-image: url('../../public/images/inner-circle.svg');
+  transform: translate(-50%, -50%) rotate(75deg);
+  animation: rotate 125ms ease-in-out forwards;
+  animation-delay: 2.2s;
+}
+
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
 }
 
 .image {
@@ -60,6 +75,15 @@
   height: auto;
   aspect-ratio: 1/1;
   object-fit: contain;
+  transform: scaleY(0);
+  animation: reveal 75ms linear forwards;
+  animation-delay: 2.4s;
+}
+
+@keyframes reveal {
+  100% {
+    transform: scaleY(1);
+  }
 }
 
 .stats {
@@ -76,6 +100,12 @@
 
 .stats li {
   margin: 1rem 0;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-height: 850px) {
