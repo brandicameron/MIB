@@ -3,9 +3,9 @@
   display: grid;
   place-content: center;
   width: fit-content;
-  height: 100%;
+  height: calc(100% - 120px);
   margin: 0 auto;
-  padding-top: 2rem;
+  top: 50px;
   gap: 2rem;
   opacity: 0;
   animation: fade-in 150ms linear forwards;
@@ -172,6 +172,16 @@
   margin: -25px auto 0 auto;
 }
 
+.stats::before {
+  position: relative;
+  content: '';
+  background-image: url('../../public/images/pointer.png');
+  width: 156px;
+  height: 94px;
+  top: 0;
+  left: -125px;
+}
+
 .stats li {
   margin: 0.75rem 0;
   line-height: 1.35;
@@ -183,10 +193,9 @@
   }
 }
 
-.galaxyContainer {
+.galaxyContainer,
+.weaponContainer {
   position: fixed;
-  display: grid;
-  place-content: center;
   bottom: 0;
   right: 0;
   width: auto;
@@ -197,22 +206,25 @@
   overflow: hidden;
 }
 
-.galaxyContainer figcaption {
+.galaxyContainer figcaption,
+.weaponContainer figcaption {
   text-align: center;
   border-bottom: 4px solid var(--stroke);
 }
 
-.galaxyContainer video {
-  object-fit: contain;
+.galaxyContainer video,
+.weaponContainer img {
+  object-fit: scale-down;
   height: 18vh;
   transition: 100ms linear;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .galaxyContainer video:hover {
-    width: 30vw;
-    height: 30vh;
-  }
+.weaponContainer {
+  left: 0;
+  right: unset;
+  border-left: none;
+  border-right: 4px solid var(--stroke);
+  min-height: fit-content;
 }
 
 @media screen and (max-height: 850px) {
@@ -223,10 +235,10 @@
   }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1100px) {
   .content {
     place-content: unset;
-    padding-top: 85px;
+    top: 60px;
   }
 
   .content h1 {
@@ -237,7 +249,11 @@
     position: relative;
     top: 0;
     right: 0;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 7rem auto;
+  }
+
+  .stats::before {
+    display: none;
   }
 
   .stats li:nth-child(1) {
@@ -245,32 +261,32 @@
     margin: 0 auto;
   }
 
-  .galaxyContainer {
+  .galaxyContainer,
+  .weaponContainer {
     position: relative;
     height: fit-content;
+    min-height: 200px;
     border-bottom: 4px solid var(--stroke);
     border-top: none;
     border-left: none;
-    margin-top: 3rem;
-    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 91%, 92% 100%, 7% 100%, 0 90%, 0 0);
   }
 
-  .galaxyContainer figcaption {
+  .galaxyContainer figcaption,
+  .weaponContainer figcaption {
     border-top: 4px solid var(--stroke);
   }
 
-  .galaxyContainer video {
-    width: 100vw;
-    object-fit: contain;
+  .galaxyContainer video,
+  .weaponContainer img {
+    width: 96vw;
     object-position: center;
-    height: 100%;
   }
 }
 
 @media screen and (max-width: 600px) {
   .content {
-    padding-top: 40px;
     gap: 0.5rem;
+    top: 35px;
   }
 
   .imageBorder {
@@ -283,13 +299,5 @@
     padding: 0;
     margin-top: -10px;
     margin-left: -25px;
-  }
-
-  .stats {
-    margin-top: 2rem;
-  }
-
-  .galaxyContainer {
-    clip-path: none;
   }
 }

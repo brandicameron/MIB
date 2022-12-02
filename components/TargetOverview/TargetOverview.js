@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Alien1 from '../../public/images/alien-1.png';
 import Alien2 from '../../public/images/alien-2.png';
 import Alien3 from '../../public/images/alien-3.png';
+import Weapon from '../../public/images/weapon.png';
 
 export default function TargetOverview() {
   const [rangeValue, setRangeValue] = useState(1);
@@ -57,6 +58,17 @@ export default function TargetOverview() {
           <li>Changes color with mood: Pink is bad news.</li>
           <li>Likely in hiding at Fulton Fish Market, Hunts Point.</li>
         </ul>
+        <aside className={styles.weaponContainer}>
+          <figure>
+            <figcaption>
+              <span className='bold'>RECOMMENDED WEAPON:</span> Icer
+            </figcaption>
+            <Image
+              src={Weapon}
+              alt='Silver gun with black handle grip and ice blue glowing tip, shown at a 45 degree angle.'
+            />
+          </figure>
+        </aside>
         <aside className={styles.galaxyContainer}>
           <figure>
             <figcaption>
