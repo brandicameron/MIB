@@ -8,12 +8,13 @@ export default function Header() {
     const date = new Date();
     const hour = date.getHours();
 
-    if (hour > 0 && hour < 12) {
+    if (hour >= 0 && hour < 12) {
       setGreeting('Good morning');
     }
     if (hour >= 12 && hour < 17) {
       setGreeting('Good afternoon');
-    } else {
+    }
+    if (hour >= 17 && hour <= 24) {
       setGreeting('Good evening');
     }
   }, []);
