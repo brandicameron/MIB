@@ -30,12 +30,13 @@ export default function TargetOverview() {
 
   return (
     <>
-      <div className={styles.content}>
+      <section className={styles.content}>
         <h1>Target Overview</h1>
         <div className={styles.imageBorder}>
           <Image
             className={styles.image}
             src={alienImg}
+            priority='true'
             alt='Commander Aldoosi, a color changing alien that is short with extra large round eyes, and horns running down the center of his head.'
           />
         </div>
@@ -50,16 +51,13 @@ export default function TargetOverview() {
         />
         <ul className={styles.stats}>
           <li>
-            COMMANDER ALDOOSI <img src='./images/alien-name.svg' alt='' />
+            COMMANDER ALDOOSI <img src='./images/alien-name.svg' alt='' width={105} height={20} />
           </li>
           <li>Escaped LunerMax Prison: November 12, 2022</li>
           <li>Changes color with mood: Pink is bad news.</li>
           <li>Likely in hiding at Fulton Fish Market, Hunts Point.</li>
         </ul>
-        {/* <article className={styles.partnerContainer}>
-
-        </article> */}
-        <article className={styles.galaxyContainer}>
+        <aside className={styles.galaxyContainer}>
           <figure>
             <figcaption>
               <span className='bold'>HOME GALAXY:</span> Markarian 231
@@ -74,8 +72,8 @@ export default function TargetOverview() {
               height={190}
             ></video>
           </figure>
-        </article>
-      </div>
+        </aside>
+      </section>
     </>
   );
 }

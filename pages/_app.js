@@ -6,8 +6,8 @@ function MyApp({ Component, pageProps }) {
 
   return getLayout(
     <>
-      <Space />
       <Component {...pageProps} />
+      <Space />
     </>
   );
 }
