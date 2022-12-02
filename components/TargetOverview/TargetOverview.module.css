@@ -79,13 +79,19 @@
   object-fit: contain;
   filter: drop-shadow(0 0 12px rgba(0 112 243 / 30%)) drop-shadow(0 0 50px rgb(106, 71, 237, 0.8));
   transform: scaleY(0);
-  animation: reveal 75ms linear forwards;
-  animation-delay: 2.4s;
+  filter: hue-rotate(120deg);
+  animation: reveal 75ms linear 2.4s forwards, chameleon 10s linear infinite alternate;
 }
 
 @keyframes reveal {
   100% {
     transform: scaleY(1);
+  }
+}
+
+@keyframes chameleon {
+  100% {
+    filter: hue-rotate(360deg);
   }
 }
 
