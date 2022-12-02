@@ -9,6 +9,10 @@
   overflow-x: hidden;
 }
 
+.container::-webkit-scrollbar {
+  display: none;
+}
+
 @media screen and (pointer: coarse) {
   .container {
     height: calc(100vh - 155px);
