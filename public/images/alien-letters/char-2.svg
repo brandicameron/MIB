@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.22 114.04"><defs><style>.cls-1{fill:#1374ee;stroke:#1374ee;stroke-miterlimit:10;stroke-width:4px;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M30.3,60.1c9.42,1.53,18.89,2.83,28.26,4.66A120,120,0,0,1,73.38,69.1c5.83,2,5.84,2.19,2.94,7.56L37.08,67.14c.33,15,4.51,27.52,9,40.67-14.42,5.68-28.63,5.56-43.52.11,6.46-17,10.09-34.14,10.1-52A143.89,143.89,0,0,0,2.85,4.46C8.81.79,9,.86,11.24,7.17c10.49,30,11.15,60.27,2.18,90.75-.46,1.57-.83,3.16-1.4,5.32,8.19,2.72,16.06,2.21,24,.45l-7.68-41.6Z"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 80.2 114" style="enable-background:new 0 0 80.2 114;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4EA1FF;stroke:#4EA1FF;stroke-width:4;stroke-miterlimit:10;}
+</style>
+<g id="Layer_2_00000163769445754754901690000007085365634936043947_">
+	<g id="Layer_1-2">
+		<path class="st0" d="M30.3,60.1c9.4,1.5,18.9,2.8,28.3,4.7c5,1.1,10,2.6,14.8,4.3c5.8,2,5.8,2.2,2.9,7.6l-39.2-9.5
+			c0.3,15,4.5,27.5,9,40.7c-14.4,5.7-28.6,5.6-43.5,0.1c6.5-17,10.1-34.1,10.1-52C12.6,38.3,9.2,20.9,2.8,4.5c6-3.7,6.2-3.6,8.4,2.7
+			c10.5,30,11.1,60.3,2.2,90.8c-0.5,1.6-0.8,3.2-1.4,5.3c8.2,2.7,16.1,2.2,24,0.4l-7.7-41.6L30.3,60.1z"/>
+	</g>
+</g>
+</svg>

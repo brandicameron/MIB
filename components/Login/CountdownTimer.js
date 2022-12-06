@@ -2,7 +2,7 @@ import styles from './CountdownTimer.module.css';
 import { useState, useEffect } from 'react';
 
 export default function CountdownTimer({ setWipeout }) {
-  const [countDown, setCountDown] = useState(5);
+  const [countDown, setCountDown] = useState(5000);
 
   useEffect(() => {
     // setting if statements to -1 allows counter to go to zero

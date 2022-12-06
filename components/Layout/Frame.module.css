@@ -14,7 +14,8 @@
   position: absolute;
   width: 50%;
   height: 100%;
-  filter: var(--frameGlow);
+  /* filter: var(--frameGlow); */
+  filter: var(--portalGlow);
   animation: slideIn 300ms ease-in forwards;
   animation-delay: 600ms;
 }

@@ -2,9 +2,8 @@
 
 :root {
   --background: #00080c;
-  --accent: #0070f3;
-  --accentLight: #6cadf7;
-  --stroke: #4fbaf8;
+  --accent: #4ea1ff;
+  --stroke: #53d5f4;
   --success: #0af536;
   --hover: #9b85ea;
   --white: #f1eeee;
@@ -12,11 +11,9 @@
   --fontLg: clamp(1.2rem, 1.9vw, 1.5rem);
   --fontMed: 1.1rem;
   --fontReg: 0.9rem;
-  --portalGlow: drop-shadow(0 0 3px #6a47ed) drop-shadow(0 0 7px #6a47ed);
-  --frameGlow: drop-shadow(0 0 3px #6a47ed) drop-shadow(0 0 50px #6a47ed)
-    drop-shadow(0 0 3px #6a47ed);
-  --glowMid: rgba(0 112 243 / 70%);
-  --glowDark: rgba(0 112 243 / 100%);
+  --logoGlow: drop-shadow(0 0 10px rgb(78 161 255 / 40%))
+    drop-shadow(0 0 90px rgb(106 71 237 / 60%));
+  --portalGlow: drop-shadow(0 0 4px rgb(106, 71, 237)) drop-shadow(0 0 9px rgb(106 71 237 / 60%));
   --successGlow: rgba(50 205 50 / 50%);
 }
 

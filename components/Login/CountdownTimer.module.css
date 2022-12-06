@@ -1,6 +1,5 @@
 .countDown {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   font-size: 4rem;
   line-height: 1;
   color: var(--accent);
