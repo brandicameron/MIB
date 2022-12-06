@@ -11,7 +11,9 @@ export default function Wipeout({ wipeout }) {
   useEffect(() => {
     if (wipeout) {
       const timer = setTimeout(() => {
-        router.push(`https://www.google.com/`);
+        router.push(
+          `https://www.google.com/search?q=what+was+I+just+doing%3F&oq=what+was+I+just+doing%3F&aqs=chrome..69i57j0i15i22i30.3824j0j7&sourceid=chrome&ie=UTF-8`
+        );
       }, 2000);
 
       return () => {
