@@ -1,6 +1,8 @@
 # Men in Black Agent Portal
 
-VIEW LIVE: [mib-brandicameron.vercel.app/](mib-brandicameron.vercel.app/) d**HINT:** The correct agent code is **Orion**
+VIEW LIVE: [https://mib-brandicameron.vercel.app/](https://mib-brandicameron.vercel.app/)
+
+**HINT:** The correct agent code is **Orion** to enter the agent portal. (but try letting it timeout first! 😃)
 
 ![App Screenshot](/public/images/screen-shot.png)
 
